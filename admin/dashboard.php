@@ -42,6 +42,37 @@
 
 ?>
 
+<?php if(isset($_GET['edit_success_message']) || isset($_GET['edit_failure_message']) || isset($_GET['order_success_message']) || isset($_GET['order_failure_message'])){ ?>
+      <!-- Modal  -->
+      <div class="modal_custom modal-active">
+        <div class="modal_custom-dialog">
+          <div class="modal_custom-content">
+            <div class="modal_custom-header">
+              <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal_custom-body">
+              <?php if(isset($_GET['edit_success_message'])){?>
+                <p style="color: #28a745;"><?php {echo $_GET['edit_success_message'];}?></p>
+              <?php }?>
+              <?php if(isset($_GET['edit_failure_message'])){?>
+                <p style="color: #c82333;"><?php {echo $_GET['edit_failure_message'];} ?></p>
+              <?php }?>
+              <?php if(isset($_GET['order_success_message'])){?>
+                <p style="color: #28a745;"><?php {echo $_GET['order_success_message'];} ?></p>
+              <?php }?>
+              <?php if(isset($_GET['order_failure_message'])){?>
+                <p style="color: #c82333;"><?php {echo $_GET['order_failure_message'];} ?></p>
+              <?php }?>
+            </div>
+            <div class="modal_custom-footer">
+              <button type="button" class="btn btn-secondary close_btn" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<?php };?>
+
 
     <div class="container-fluid">
       <div class="row">
@@ -164,5 +195,16 @@
         </main>
       </div>
     </div>
+    <script>
+      const modal = document.querySelector('.modal_custom');
+      const btnModal = document.querySelector(".btn-close");
+      const closeBtn = document.querySelector(".close_btn");
+      btnModal.addEventListener('click', () => {
+        modal.classList.remove('modal-active');
+      })
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('modal-active');
+      })
+    </script>
   </body>
 </html>

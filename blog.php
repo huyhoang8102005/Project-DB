@@ -16,6 +16,7 @@
       include('layout/navbar.php');
     ?>
 
+
     <!-- Blog Content -->
     <div class="container my-5">
         <div class="row">

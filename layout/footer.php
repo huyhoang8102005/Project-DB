@@ -45,5 +45,16 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const modal = document.querySelector('.modal_custom');
+      const btnModal = document.querySelector(".btn-close");
+      const closeBtn = document.querySelector(".close_btn");
+      btnModal.addEventListener('click', () => {
+        modal.classList.remove('modal-active');
+      })
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('modal-active');
+      })
+    </script>
   </body>
 </html>

@@ -60,7 +60,7 @@
               choose trendy or classy design according to your preferences. Our
               services are super fast and we update within 24 hours.
             </h5>
-            <a href="shop.html"><button class="hero_button button" style="width: 160px;">Shop Now</button></a>
+            <a href="shop.php"><button class="hero_button button" style="width: 160px;">Shop Now</button></a>
           </div>
           <div class="hero_right">
             <img class="hero_img" src="./assets/img/hero_img.png" alt="" />

@@ -6,7 +6,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>Admin Page</title>
     <meta
       http-equiv="Content-Security-Policy"
       content="script-src 'self' 'unsafe-inline';"
@@ -25,12 +25,13 @@
     <link rel="stylesheet" href="../assets/css/index.css" />
     <link rel="stylesheet" href="../assets/css/login.css">
     <link rel="stylesheet" href="../assets/css/edit_product.css">
+    <link rel="stylesheet" href="../assets/css/modal.css">
   </head>
   <body>
     <nav
       class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-3 shadow"
     >
-      <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#"
+      <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="dashboard.php"
         >CAT COMPANY</a
       >
       <?php if(isset($_SESSION['admin_logged_in'])){ ?>

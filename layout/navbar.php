@@ -27,7 +27,7 @@
             <div class="nav_icon">
               <a href="cart.php" style="position: relative;">
                 <img src="./assets/img/nav_bag.svg" alt="" />
-                <?php if(isset($_SESSION['total_quantity']) && $_SESSION['total_quantity'] != 0){?>
+                <?php if(isset($_SESSION['total_quantity']) && $_SESSION['total_quantity'] != 0 && isset($_SESSION['logged_in'])){?>
                     <div class="total_quantity"><?php echo $_SESSION['total_quantity'];?></div>
                 <?php }?>
               </a>

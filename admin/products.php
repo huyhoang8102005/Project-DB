@@ -43,6 +43,37 @@
 ?>
 
 
+<?php if(isset($_GET['delete_message_success']) || isset($_GET['delete_message_failure']) || isset($_GET['product_created']) || isset($_GET['product_failed'])){ ?>
+      <!-- Modal  -->
+      <div class="modal_custom modal-active">
+        <div class="modal_custom-dialog">
+          <div class="modal_custom-content">
+            <div class="modal_custom-header">
+              <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal_custom-body">
+              <?php if(isset($_GET['delete_message_success'])){?>
+                <p style="color: #28a745;"><?php {echo $_GET['delete_message_success'];} ?></p>
+              <?php }?>
+              <?php if(isset($_GET['delete_message_failure'])){?>
+                <p style="color: #c82333;"><?php {echo $_GET['delete_message_failure'];} ?></p>
+              <?php }?>
+              <?php if(isset($_GET['product_created'])){?>
+                <p style="color: #28a745;"><?php {echo $_GET['product_created'];} ?></p>
+              <?php }?>
+              <?php if(isset($_GET['product_failed'])){?>
+                <p style="color: #c82333;"><?php {echo $_GET['product_failed'];} ?></p>
+              <?php }?>
+            </div>
+            <div class="modal_custom-footer">
+              <button type="button" class="btn btn-secondary close_btn" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<?php };?>
+
     <div class="container-fluid">
       <div class="row">
         <nav

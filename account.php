@@ -26,18 +26,18 @@ if (isset($_POST['changePasswordBtn'])) {
   $user_email = $_SESSION['user_email'];
 
   if ($password !== $confirmPassword) {
-    header("location: account.php?error=password do not match");
+    header("location: account.php?password_error=password do not match");
   } elseif (strlen($password) < 6) {
-    header('location: account.php?error=password must be at least 6 characters');
+    header('location: account.php?password_error=password must be at least 6 characters');
   }
   else {
     $stmt = $conn->prepare("UPDATE users SET user_password = ? WHERE user_email =?");
     $stmt->bind_param("ss", md5($password), $user_email);
 
     if ($stmt->execute()) {
-      header("location: account.php?message=password has been updated");
+      header("location: account.php?change_password_message=password has been updated");
     } else {
-      header("location: account.php?message=could not update your password");
+      header("location: account.php?change_password_message=could not update your password");
     }
   }
 }
@@ -90,20 +90,52 @@ if (isset($_SESSION['logged_in'])) {
     <link rel="stylesheet" href="assets/css/account.css">
     <link rel="stylesheet" href="assets/css/cart.css">
     <link rel="stylesheet" href="assets/css/orders.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
   </head>
   <body>
     <?php 
       include('layout/navbar.php');
     ?>
 
+    <?php if(isset($_GET['register_success']) || isset($_GET['login_success']) || isset($_GET['password_error']) || isset($_GET['change_password_message']) || isset($_GET['payment_message'])){ ?>
+      <!-- Modal  -->
+      <div class="modal_custom modal-active">
+        <div class="modal_custom-dialog">
+          <div class="modal_custom-content">
+            <div class="modal_custom-header">
+              <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal_custom-body">
+              <?php if(isset($_GET['register_success'])){?>
+                <p style="color: #28a745;"><?php {echo $_GET['register_success'];} ?></p>
+              <?php }?>
+              <?php if(isset($_GET['login_success'])){?>
+                <p style="color: #28a745;"><?php {echo $_GET['login_success'];} ?></p>
+              <?php }?>
+              <?php if(isset($_GET['password_error'])){?>
+                <p style="color: #c82333;"><?php {echo $_GET['password_error'];} ?></p>
+              <?php }?>
+              <?php if(isset($_GET['change_password_message'])){?>
+                <p style="color: #28a745;"><?php {echo $_GET['change_password_message'];} ?></p>
+              <?php }?>
+              <?php if(isset($_GET['payment_message'])){?>
+                <p style="color: #28a745;"><?php {echo $_GET['payment_message'];} ?></p>
+              <?php }?>
+            </div>
+            <div class="modal_custom-footer">
+              <button type="button" class="btn btn-secondary close_btn" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php };?>
 
     <!-- Account  -->
      <section class="account my-5 pt-5">
       <div class="row container">
         <div class="col-6 text-center">
           <div class="account-left">
-          <p class="mb-3" style="color: green;"><?php if(isset($_GET['register_success'])) {echo $_GET['register_success'];}?></p>
-          <p class="mb-3" style="color: green;"><?php if(isset($_GET['login_success'])) {echo $_GET['login_success'];}?></p>
             <h2 class="account_info">Account Info</h2>
             <div class="line mx-auto" style="width: 60px;"></div>
             <div class="account_info-content">
@@ -128,8 +160,6 @@ if (isset($_SESSION['logged_in'])) {
         </div>
 
         <div class="col-6 text-center">
-          <p class="mb-3" style="color: red;"><?php if(isset($_GET['error'])) {echo $_GET['error'];}?></p>
-          <p class="mb-3" style="color: green;"><?php if(isset($_GET['message'])) {echo $_GET['message'];}?></p>
           <h2 class="change-password">Change Password</h2>
           <div class="line mx-auto" style="width: 60px;"></div>
           <form id="account-form" method="POST" action="account.php">
@@ -176,6 +206,7 @@ if (isset($_SESSION['logged_in'])) {
       <?php }?>
     </section>  
 
+    
 
 <?php 
   include('layout/footer.php');

@@ -76,8 +76,6 @@ if (isset($_POST['order_pay_btn'])) {
             <p style="color: black">You don't have an order</p>
           <?php }?>   
           
-          
-          
       </div>
      </section>
 
