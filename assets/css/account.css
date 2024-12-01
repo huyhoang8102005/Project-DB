@@ -1,0 +1,31 @@
+.account_info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.account_info,
+.change-password {
+  font-size: 38px;
+}
+
+#account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#account-form input {
+  width: 400px;
+  margin: 5px auto;
+}
+
+.account_orders {
+  text-decoration: underline;
+  color: #ff7f50;
+}
+
+.account_logout {
+  display: inline-block;
+  width: 300px;
+}

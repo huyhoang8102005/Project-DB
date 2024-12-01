@@ -1,0 +1,42 @@
+.featured {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.product {
+  cursor: pointer;
+}
+
+.product_img {
+  transition: all 0.3s;
+}
+
+.product:hover .product_img {
+  opacity: 0.8;
+}
+
+.product_img {
+  margin-bottom: 16px;
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+}
+
+.featured_top h2 {
+  font-size: 42px;
+}
+
+.featured_top-desc {
+  font-size: 16px;
+}
+
+.product_name {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.product_price {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-size: 22px;
+}

@@ -1,0 +1,25 @@
+.login_title {
+  font-size: 38px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#login-form input {
+  width: 400px;
+  margin: 5px auto;
+}
+
+#register-url {
+  color: #754F23;
+  transition: all 0.2s;
+}
+
+#login-url:hover {
+  color: #fb774b;
+}
+
+

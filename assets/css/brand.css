@@ -1,0 +1,16 @@
+.brand {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.brand_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand_img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}

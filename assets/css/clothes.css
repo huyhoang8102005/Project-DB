@@ -1,0 +1,21 @@
+.clothes {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.clothes_top h2 {
+  font-size: 42px;
+}
+
+.featured_top-desc {
+  font-size: 16px;
+}
+
+.product_name {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.product_price {
+  font-size: 22px;
+}

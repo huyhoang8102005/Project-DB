@@ -1,0 +1,43 @@
+.order_detail-title {
+  font-size: 34px;
+}
+
+.order_detail-top {
+  padding-top: 50px;
+  display: flex;
+}
+
+.order_detail-top p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #754F23;
+  flex: 1;
+}
+
+.order_detail-product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.order_detail-product img {
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+}
+
+.order_detail-product p {
+  color: black;
+}
+
+.order_detail-content {
+  display: flex;
+  align-items: center;
+}
+
+.order_detail-content span {
+  flex: 1;
+}
+

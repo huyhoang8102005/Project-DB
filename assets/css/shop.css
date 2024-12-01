@@ -1,0 +1,56 @@
+.shop {
+  margin-bottom: 140px;
+}
+
+.shop_title {
+  font-size: 24px !important;
+  font-weight: 400;
+}
+
+.featured_top-shop-desc {
+  margin-top: 6px;
+  color: #d0cdcd;
+  font-size: 16px;
+}
+
+.featured {
+  padding-left: 300px;
+}
+
+#search {
+  position: absolute;
+  width: 200px;
+  top: 83px;
+  left: 0;
+}
+
+#search p {
+  color: black;
+}
+
+.form-range {
+  width: 200px;
+}
+
+.form-range::before {
+  content: "1";
+  margin-right: 5px;
+}
+
+.form-range::after {
+  content: "1000";
+  margin-left: 5px;
+}
+
+.shop_navigation {
+  padding-bottom: 50px;
+  padding-left: 150px;
+}
+
+.shop_no-padding {
+  padding-bottom: 0;
+}
+
+.product_shop {
+  margin-top: 60px;
+}

@@ -1,0 +1,13 @@
+.contact_title {
+  font-size: 38px;
+}
+
+.contact_content {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.contact_content span {
+  font-weight: 500;
+  color: coral;
+}

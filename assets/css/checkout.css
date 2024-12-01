@@ -1,0 +1,24 @@
+.checkout_title {
+  font-size: 38px;
+}
+
+.checkout_small-element {
+  display: inline-block;
+  width: 48%;
+  margin: 10px auto;
+  margin-right: 10px;
+}
+
+.checkout_large-element {
+  width: calc(97% + 3px);
+}
+
+.form-group input {
+  margin-top: 8px;
+}
+
+.checkout_button {
+  margin-top: 50px;
+  margin-right: 2%;
+  text-align: right;
+}

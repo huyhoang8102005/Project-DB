@@ -1,0 +1,25 @@
+.register_title {
+  font-size: 38px;
+}
+
+#register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#register-form input {
+  width: 400px;
+  margin: 5px auto;
+}
+
+#login-url {
+  color: #754F23;
+  transition: all 0.2s;
+}
+
+#register-url:hover {
+  color: #fb774b;
+}
+
+
