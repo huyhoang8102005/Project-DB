@@ -40,8 +40,8 @@
       <div class="text-center container">
         <h2 class="contact_title">Contact us</h2>
         <div class="line mx-auto" style="width: 60px;"></div>
-        <div class="contact_content">Phone number: <span>123 456 789</span></div>
-        <div class="contact_content">Email address: <span>info@gmail.com</span></div>
+        <div class="contact_content">Phone number: <span>0382735167</span></div>
+        <div class="contact_content">Email address: <span>23139014@student.hcmute.edu.vn</span></div>
         <div class="contact_content">We work 24/7 to answer your questions</div>
       </div>
     </section>
