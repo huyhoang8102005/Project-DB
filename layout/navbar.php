@@ -20,6 +20,9 @@
               <a href="contact.php">
                 <li class="nav_link">Contact us</li>
               </a>
+              <a href="/admin/login.php">
+                <li class="nav_link">Admin</li>
+              </a>
             </ul>
             <div class="nav_icon">
               <a href="cart.php" style="position: relative;">
